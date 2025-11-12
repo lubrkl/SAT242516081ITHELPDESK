@@ -1,0 +1,46 @@
+﻿@page "/talep-listesi"
+@rendermode InteractiveServer
+
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize]
+
+<h3>Taleplerim</h3>
+
+@if (taleplerim == null)
+{
+    <p><em>Yükleniyor...</em></p>
+}
+else if (taleplerim.Count == 0)
+{
+    <p>Henüz oluşturulmuş bir talebiniz bulunmuyor.</p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Başlık</th>
+                <th>Kategori</th>
+                <th>Durum</th>
+                <th>Oluşturulma Tarihi</th>
+                <th>İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var talep in taleplerim)
+            {
+                <tr>
+                    <td>@talep.Baslik</td>
+                    <td>@talep.Kategori.Ad</td>
+                    <td>@talep.Durum.Ad</td>
+                    <td>@talep.OlusturmaTarihi.ToShortDateString()</td>
+                    <td>
+                        @* NTP Raporundaki  butonlar. Şimdilik bir yere gitmiyorlar. *@
+                        <button class="btn btn-warning btn-sm">Güncelle</button>
+                        <button class="btn btn-danger btn-sm">Sil</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
