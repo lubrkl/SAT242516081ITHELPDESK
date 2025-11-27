@@ -1,19 +1,16 @@
 ﻿@page "/talep-olustur"
 @rendermode InteractiveServer
 
-@* Kullanıcının bu sayfayı görmesi için giriş yapmış olması gerekir *@
+
 @using Microsoft.AspNetCore.Authorization
 @attribute [Authorize]
 
 <h3>Yeni Yardım Talebi Oluştur</h3>
 
-@* EditForm: Blazor'un form yönetim aracıdır.
-    Model="@yeniTalep": Formun hangi C# nesnesiyle çalışacağını belirtir.
-    OnValidSubmit="HandleTalepOlustur": Form geçerliyse (hata yoksa) hangi metodu çalıştıracağını belirtir.
-*@
+
 <EditForm Model="yeniTalep" OnValidSubmit="HandleTalepOlustur" FormName="TalepFormu">
 
-    @* Hata kontrolü için (örn: Başlık boş bırakılırsa) *@
+    
     <DataAnnotationsValidator />
     <ValidationSummary />
 
