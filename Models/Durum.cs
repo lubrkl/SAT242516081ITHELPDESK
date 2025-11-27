@@ -8,7 +8,7 @@ namespace SAT242516081ITHELPDESK.Models
 
         [Required]
         [StringLength(100)]
-        public string Ad { get; set; } // <-- HATA 3'ÜN ARADIĞI ÖZELLİK
+        public string Ad { get; set; }
 
         public virtual ICollection<Talep> Talepler { get; set; } = new List<Talep>();
     }
