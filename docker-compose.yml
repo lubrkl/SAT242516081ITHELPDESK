@@ -1,0 +1,24 @@
+﻿version: '3.8'
+
+services:
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Password123!
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql_data:/var/opt/mssql
+
+  webapp:
+    build: .
+    ports:
+      - "5000:80"
+    depends_on:
+      - mssql
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=mssql;Database=ITHelpDesk;User Id=sa;Password=Password123!;TrustServerCertificate=True;
+
+volumes:
+  mssql_data:
