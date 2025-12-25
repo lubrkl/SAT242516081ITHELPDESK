@@ -1,0 +1,43 @@
+﻿@page "/Account/Register"
+@layout SAT242516081.Components.Layout.EmptyLayout
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<IdentityUser> UserManager
+@inject NavigationManager Navigation
+@rendermode InteractiveServer
+
+<div class="d-flex justify-content-center align-items-center vh-100 bg-light">
+    <div class="card p-4" style="width: 350px;">
+        <h3 class="text-center mb-4">Kayıt Ol</h3>
+        <div class="mb-3">
+            <label>Email</label>
+            <input @bind="email" class="form-control" type="email" />
+        </div>
+        <div class="mb-3">
+            <label>Şifre</label>
+            <input @bind="password" class="form-control" type="password" />
+        </div>
+        <button class="btn btn-primary w-100" @onclick="RegisterUser">Kayıt Ol</button>
+        <p class="text-danger mt-2 text-center">@errorMessage</p>
+        <p class="text-center mt-3"><a href="/Account/Login">Giriş Yap</a></p>
+    </div>
+</div>
+
+@code {
+    private string email = "";
+    private string password = "";
+    private string errorMessage = "";
+
+    private async Task RegisterUser()
+    {
+        var user = new IdentityUser { UserName = email, Email = email };
+        var result = await UserManager.CreateAsync(user, password);
+
+        if (result.Succeeded)
+        {
+            await UserManager.AddToRoleAsync(user, "User");
+            Navigation.NavigateTo("/Account/Login");
+        }
+        else
+            errorMessage = string.Join(", ", result.Errors.Select(e => e.Description));
+    }
+}

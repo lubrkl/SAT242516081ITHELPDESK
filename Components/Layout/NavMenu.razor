@@ -1,0 +1,90 @@
+﻿@implements IDisposable
+@inject NavigationManager NavigationManager
+@using Microsoft.AspNetCore.Components.Authorization
+
+<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">SAT242516081</a>
+    </div>
+</div>
+
+<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
+
+<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
+    <nav class="flex-column">
+
+        <AuthorizeView>
+            <Authorized>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="dashboard">
+                        <span class="bi bi-speedometer2 me-2" aria-hidden="true"></span> Dashboard
+                    </NavLink>
+                </div>
+
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="tickets">
+                        <span class="bi bi-ticket-perforated me-2" aria-hidden="true"></span> Talepler
+                    </NavLink>
+                </div>
+
+                <AuthorizeView Roles="Admin,Technician" Context="innerContext">
+                    <div class="nav-item px-3">
+                        <NavLink class="nav-link" href="employees">
+                            <span class="bi bi-people-fill me-2" aria-hidden="true"></span> Çalışanlar
+                        </NavLink>
+                    </div>
+                </AuthorizeView>
+
+                <div class="nav-item px-3 mt-4 border-top pt-2">
+                    <NavLink class="nav-link" href="Account/Manage">
+                        <span class="bi bi-person-circle me-2" aria-hidden="true"></span> @context.User.Identity?.Name
+                    </NavLink>
+                </div>
+
+                <div class="nav-item px-3">
+                    <form action="/Account/Logout" method="post">
+                        <AntiforgeryToken />
+                        <button type="submit" class="nav-link btn btn-link text-danger w-100 text-start">
+                            <span class="bi bi-box-arrow-left me-2"></span> Çıkış Yap
+                        </button>
+                    </form>
+                </div>
+            </Authorized>
+
+            <NotAuthorized>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="Account/Login">
+                        <span class="bi bi-box-arrow-in-right me-2"></span> Giriş Yap
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="Account/Register">
+                        <span class="bi bi-person-plus me-2"></span> Kayıt Ol
+                    </NavLink>
+                </div>
+            </NotAuthorized>
+        </AuthorizeView>
+    </nav>
+</div>
+
+@code {
+    // Logout işlemi için gerekli kodlar
+    private string? currentUrl;
+
+    protected override void OnInitialized()
+    {
+        currentUrl = NavigationManager.ToBaseRelativePath(NavigationManager.Uri);
+        NavigationManager.LocationChanged += OnLocationChanged;
+    }
+
+    private void OnLocationChanged(object? sender, LocationChangedEventArgs e)
+    {
+        currentUrl = NavigationManager.ToBaseRelativePath(e.Location);
+        StateHasChanged();
+    }
+
+    public void Dispose()
+    {
+        NavigationManager.LocationChanged -= OnLocationChanged;
+    }
+}

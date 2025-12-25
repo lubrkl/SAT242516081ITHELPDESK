@@ -1,0 +1,603 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ASUS\\Documents\\SAT242516081\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\models\\extensions\\extensions_enum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:models\\extensions\\extensions_enum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\models\\extensions\\extensions_sqlparameter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:models\\extensions\\extensions_sqlparameter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\models\\extensions\\extensions_datatable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:models\\extensions\\extensions_datatable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\models\\attributes\\colorattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:models\\attributes\\colorattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\models\\providers\\mydbmodel_provider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:models\\providers\\mydbmodel_provider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\models\\unitofworks\\mydbmodel_unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:models\\unitofworks\\mydbmodel_unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\models\\dbcontexts\\mydbmodel_dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:models\\dbcontexts\\mydbmodel_dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\models\\mydbmodels\\mydbmodel_extension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:models\\mydbmodels\\mydbmodel_extension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\models\\mydbmodels\\mydbmodel_result_keyvalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:models\\mydbmodels\\mydbmodel_result_keyvalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\models\\mydbmodels\\mydbmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:models\\mydbmodels\\mydbmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\components\\account\\pages\\manage\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:components\\account\\pages\\manage\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\components\\account\\pages\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:components\\account\\pages\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\components\\account\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:components\\account\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\components\\pages\\tickets.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:components\\pages\\tickets.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\components\\pages\\dashboard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:components\\pages\\dashboard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\models\\dashboardstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:models\\dashboardstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\components\\account\\pages\\externallogin.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:components\\account\\pages\\externallogin.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\sat242516081.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:sat242516081.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\components\\pages\\employees.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:components\\pages\\employees.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\resources\\sharedresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:resources\\sharedresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ASUS\\Documents\\SAT242516081\\obj\\Debug\\net8.0\\SAT242516081.AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\Debug\\net8.0\\SAT242516081.AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\components\\layout\\emptylayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:components\\layout\\emptylayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\components\\account\\pages\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:components\\account\\pages\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\components\\redirecttologin.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:components\\redirecttologin.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|c:\\users\\asus\\documents\\sat242516081\\migrations\\20251224225046_identitykurulumu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE809657-A342-3647-8C63-6B547204C004}|SAT242516081.csproj|solutionrelative:migrations\\20251224225046_identitykurulumu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAUwF4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T02:03:32.861Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Extensions_Enum.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Models\\Extensions\\Extensions_Enum.cs",
+              "RelativeDocumentMoniker": "Models\\Extensions\\Extensions_Enum.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Models\\Extensions\\Extensions_Enum.cs",
+              "RelativeToolTip": "Models\\Extensions\\Extensions_Enum.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAwDQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T08:19:47.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Extensions_SqlParameter.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Models\\Extensions\\Extensions_SqlParameter.cs",
+              "RelativeDocumentMoniker": "Models\\Extensions\\Extensions_SqlParameter.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Models\\Extensions\\Extensions_SqlParameter.cs",
+              "RelativeToolTip": "Models\\Extensions\\Extensions_SqlParameter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T08:18:38.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Extensions_DataTable.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Models\\Extensions\\Extensions_DataTable.cs",
+              "RelativeDocumentMoniker": "Models\\Extensions\\Extensions_DataTable.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Models\\Extensions\\Extensions_DataTable.cs",
+              "RelativeToolTip": "Models\\Extensions\\Extensions_DataTable.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAqwDwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T08:16:03.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ColorAttribute.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Models\\Attributes\\ColorAttribute.cs",
+              "RelativeDocumentMoniker": "Models\\Attributes\\ColorAttribute.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Models\\Attributes\\ColorAttribute.cs",
+              "RelativeToolTip": "Models\\Attributes\\ColorAttribute.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T08:14:26.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MyDbModel_Provider.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Models\\Providers\\MyDbModel_Provider.cs",
+              "RelativeDocumentMoniker": "Models\\Providers\\MyDbModel_Provider.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Models\\Providers\\MyDbModel_Provider.cs",
+              "RelativeToolTip": "Models\\Providers\\MyDbModel_Provider.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA1wEwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T08:00:05.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MyDbModel_UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Models\\UnitOfWorks\\MyDbModel_UnitOfWork.cs",
+              "RelativeDocumentMoniker": "Models\\UnitOfWorks\\MyDbModel_UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Models\\UnitOfWorks\\MyDbModel_UnitOfWork.cs",
+              "RelativeToolTip": "Models\\UnitOfWorks\\MyDbModel_UnitOfWork.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAQwGoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T07:58:16.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MyDbModel_DbContext.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Models\\DbContexts\\MyDbModel_DbContext.cs",
+              "RelativeDocumentMoniker": "Models\\DbContexts\\MyDbModel_DbContext.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Models\\DbContexts\\MyDbModel_DbContext.cs",
+              "RelativeToolTip": "Models\\DbContexts\\MyDbModel_DbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T07:57:05.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MyDbModel_Extension.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Models\\MyDbModels\\MyDbModel_Extension.cs",
+              "RelativeDocumentMoniker": "Models\\MyDbModels\\MyDbModel_Extension.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Models\\MyDbModels\\MyDbModel_Extension.cs",
+              "RelativeToolTip": "Models\\MyDbModels\\MyDbModel_Extension.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T07:56:21.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MyDbModel_Result_KeyValue.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Models\\MyDbModels\\MyDbModel_Result_KeyValue.cs",
+              "RelativeDocumentMoniker": "Models\\MyDbModels\\MyDbModel_Result_KeyValue.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Models\\MyDbModels\\MyDbModel_Result_KeyValue.cs",
+              "RelativeToolTip": "Models\\MyDbModels\\MyDbModel_Result_KeyValue.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T07:53:12.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MyDbModel.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Models\\MyDbModels\\MyDbModel.cs",
+              "RelativeDocumentMoniker": "Models\\MyDbModels\\MyDbModel.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Models\\MyDbModels\\MyDbModel.cs",
+              "RelativeToolTip": "Models\\MyDbModels\\MyDbModel.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAADwvx8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T07:51:30.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "Components\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "Components\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-25T07:45:42.875Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Components\\_Imports.razor",
+              "RelativeDocumentMoniker": "Components\\_Imports.razor",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Components\\_Imports.razor",
+              "RelativeToolTip": "Components\\_Imports.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-25T07:44:49.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Components\\Account\\Pages\\_Imports.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\_Imports.razor",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Components\\Account\\Pages\\_Imports.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\_Imports.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-25T07:44:48.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-25T07:40:58.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "DashboardStats.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Models\\DashboardStats.cs",
+              "RelativeDocumentMoniker": "Models\\DashboardStats.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Models\\DashboardStats.cs",
+              "RelativeToolTip": "Models\\DashboardStats.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T00:03:43.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ExternalLogin.razor",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Components\\Account\\Pages\\ExternalLogin.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\ExternalLogin.razor",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Components\\Account\\Pages\\ExternalLogin.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\ExternalLogin.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T23:01:50.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAwC0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T22:59:41.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "SAT242516081.csproj",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\SAT242516081.csproj",
+              "RelativeDocumentMoniker": "SAT242516081.csproj",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\SAT242516081.csproj",
+              "RelativeToolTip": "SAT242516081.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-24T22:59:23.282Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "20251224225046_IdentityKurulumu.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Migrations\\20251224225046_IdentityKurulumu.cs",
+              "RelativeDocumentMoniker": "Migrations\\20251224225046_IdentityKurulumu.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Migrations\\20251224225046_IdentityKurulumu.cs",
+              "RelativeToolTip": "Migrations\\20251224225046_IdentityKurulumu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T22:50:46.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "Components\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAADwAAAAAAAAAAAAuwFkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T22:40:11.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "app.css",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\wwwroot\\app.css",
+              "RelativeDocumentMoniker": "wwwroot\\app.css",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\wwwroot\\app.css",
+              "RelativeToolTip": "wwwroot\\app.css",
+              "ViewState": "AgIAALoAAAAAAAAAAAA0wNMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-12-24T22:28:56.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "SharedResource.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Resources\\SharedResource.cs",
+              "RelativeDocumentMoniker": "Resources\\SharedResource.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Resources\\SharedResource.cs",
+              "RelativeToolTip": "Resources\\SharedResource.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T21:41:44.201Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "EmptyLayout.razor",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Components\\Layout\\EmptyLayout.razor",
+              "RelativeDocumentMoniker": "Components\\Layout\\EmptyLayout.razor",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Components\\Layout\\EmptyLayout.razor",
+              "RelativeToolTip": "Components\\Layout\\EmptyLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T02:50:54.612Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Register.razor",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Components\\Account\\Pages\\Register.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\Register.razor",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Components\\Account\\Pages\\Register.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\Register.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T02:40:48.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Login.razor",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Components\\Account\\Pages\\Login.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\Login.razor",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Components\\Account\\Pages\\Login.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\Login.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T02:39:48.403Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Routes.razor",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Components\\Routes.razor",
+              "RelativeDocumentMoniker": "Components\\Routes.razor",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Components\\Routes.razor",
+              "RelativeToolTip": "Components\\Routes.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T02:30:52.333Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Employees.razor",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Components\\Pages\\Employees.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Employees.razor",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Components\\Pages\\Employees.razor",
+              "RelativeToolTip": "Components\\Pages\\Employees.razor",
+              "ViewState": "AgIAAKEAAAAAAAAAAAA0wLkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T02:29:04.375Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Tickets.razor",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Components\\Pages\\Tickets.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Tickets.razor",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Components\\Pages\\Tickets.razor",
+              "RelativeToolTip": "Components\\Pages\\Tickets.razor",
+              "ViewState": "AgIAANEAAAAAAAAAAAAYwOMAAACIAgAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T02:28:51.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Components\\App.razor",
+              "RelativeDocumentMoniker": "Components\\App.razor",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Components\\App.razor",
+              "RelativeToolTip": "Components\\App.razor",
+              "ViewState": "AgIAABUAAAAAAAAAAAA2wDEAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T02:20:42.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Dashboard.razor",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Components\\Pages\\Dashboard.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Dashboard.razor",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Components\\Pages\\Dashboard.razor",
+              "RelativeToolTip": "Components\\Pages\\Dashboard.razor",
+              "ViewState": "AgIAAOsAAAAAAAAAAAAYwP0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T02:18:59.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Components\\Account\\Pages\\Manage\\_Imports.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\Manage\\_Imports.razor",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Components\\Account\\Pages\\Manage\\_Imports.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\Manage\\_Imports.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T02:14:00.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "RedirectToLogin.razor",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Components\\RedirectToLogin.razor",
+              "RelativeDocumentMoniker": "Components\\RedirectToLogin.razor",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Components\\RedirectToLogin.razor",
+              "RelativeToolTip": "Components\\RedirectToLogin.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T02:13:37.95Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "SAT242516081.AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\obj\\Debug\\net8.0\\SAT242516081.AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "obj\\Debug\\net8.0\\SAT242516081.AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\obj\\Debug\\net8.0\\SAT242516081.AssemblyInfo.cs",
+              "RelativeToolTip": "obj\\Debug\\net8.0\\SAT242516081.AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T02:10:27.517Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\SAT242516081\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T02:06:48.275Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

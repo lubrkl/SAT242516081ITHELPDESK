@@ -1,0 +1,186 @@
+﻿@page "/employees"
+@using ITHelpDesk.Models
+@using MyDbModels
+@using Providers
+@using Microsoft.Extensions.Localization
+@using SAT242516081.Resources
+@inject IMyDbModel_Provider Provider
+@inject IStringLocalizer<SharedResource> L
+@rendermode InteractiveServer
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize]
+
+<h3>@L["Employees"]</h3>
+
+<div class="mb-3">
+    <button class="btn btn-primary" @onclick="ShowAddForm">+ @L["Add"]</button>
+</div>
+
+@if (showForm)
+{
+    <div class="card mb-3">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6 mb-2">
+                    <label>@L["FullName"]</label>
+                    <input @bind="editItem.FullName" class="form-control" />
+                </div>
+                <div class="col-md-6 mb-2">
+                    <label>@L["Email"]</label>
+                    <input @bind="editItem.Email" class="form-control" />
+                </div>
+                <div class="col-md-6 mb-2">
+                    <label>@L["Phone"]</label>
+                    <input @bind="editItem.Phone" class="form-control" />
+                </div>
+                <div class="col-md-6 mb-2">
+                    <label>@L["Department"]</label>
+                    <select @bind="editItem.DepartmentId" class="form-control">
+                        @foreach (var d in departments)
+                        {
+                            <option value="@d.DepartmentId">@d.DepartmentName</option>
+                        }
+                    </select>
+                </div>
+                @if (isEdit)
+                {
+                    <div class="col-md-6 mb-2">
+                        <label>@L["Active"]</label>
+                        <select @bind="editItem.IsActive" class="form-control">
+                            <option value="true">@L["Yes"]</option>
+                            <option value="false">@L["No"]</option>
+                        </select>
+                    </div>
+                }
+            </div>
+            <button class="btn btn-success" @onclick="SaveItem">@L["Save"]</button>
+            <button class="btn btn-secondary" @onclick="CancelForm">@L["Cancel"]</button>
+        </div>
+    </div>
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>@L["FullName"]</th>
+            <th>@L["Email"]</th>
+            <th>@L["Phone"]</th>
+            <th>@L["Department"]</th>
+            <th>@L["Active"]</th>
+            <th>@L["Actions"]</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in model.Items)
+        {
+            <tr>
+                <td>@item.EmployeeId</td>
+                <td>@item.FullName</td>
+                <td>@item.Email</td>
+                <td>@item.Phone</td>
+                <td>@item.DepartmentName</td>
+                <td>@(item.IsActive? L["Yes"] : L["No"])</td>
+                <td>
+                    <button class="btn btn-sm btn-warning" @onclick="() => EditItem(item)">@L["Edit"]</button>
+                    <button class="btn btn-sm btn-danger" @onclick="() => DeleteItem(item.EmployeeId)">@L["Delete"]</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="d-flex justify-content-between">
+    <span>@L["Total"]: @model.Parameters.TotalRecordCount</span>
+    <div>
+        <button class="btn btn-sm btn-outline-primary" disabled="@(model.Parameters.PageNumber <= 1)" @onclick="PrevPage">@L["Previous"]</button>
+        <span class="mx-2">@model.Parameters.PageNumber / @model.Parameters.TotalPageCount</span>
+        <button class="btn btn-sm btn-outline-primary" disabled="@(model.Parameters.PageNumber >= model.Parameters.TotalPageCount)" @onclick="NextPage">@L["Next"]</button>
+    </div>
+</div>
+
+@code {
+    private IMyDbModel<Employee> model = new MyDbModel<Employee>();
+    private Employee editItem = new();
+    private bool showForm = false;
+    private bool isEdit = false;
+
+    private List<Department> departments = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        departments = (await Provider.GetItems<Department>("sp_Departments_GetAll")).ToList();
+        await LoadData();
+    }
+
+    private async Task LoadData()
+    {
+        model = await Provider.Execute(model, "sp_Employees_Get");
+    }
+
+    private void ShowAddForm()
+    {
+        editItem = new Employee { DepartmentId = 1, IsActive = true };
+        isEdit = false;
+        showForm = true;
+    }
+
+    private void EditItem(Employee item)
+    {
+        editItem = new Employee
+        {
+            EmployeeId = item.EmployeeId,
+            FullName = item.FullName,
+            Email = item.Email,
+            Phone = item.Phone,
+            DepartmentId = item.DepartmentId,
+            IsActive = item.IsActive
+        };
+        isEdit = true;
+        showForm = true;
+    }
+
+    private async Task SaveItem()
+    {
+        if (isEdit)
+        {
+            await Provider.SetItems<Employee>("sp_Employees_Update",
+                ("EmployeeId", editItem.EmployeeId),
+                ("FullName", editItem.FullName),
+                ("Email", editItem.Email),
+                ("Phone", editItem.Phone ?? ""),
+                ("DepartmentId", editItem.DepartmentId),
+                ("IsActive", editItem.IsActive));
+        }
+        else
+        {
+            await Provider.SetItems<Employee>("sp_Employees_Insert",
+                ("FullName", editItem.FullName),
+                ("Email", editItem.Email),
+                ("Phone", editItem.Phone ?? ""),
+                ("DepartmentId", editItem.DepartmentId));
+        }
+        showForm = false;
+        await LoadData();
+    }
+
+    private async Task DeleteItem(int id)
+    {
+        await Provider.SetItems<Employee>("sp_Employees_Delete", ("EmployeeId", id));
+        await LoadData();
+    }
+
+    private void CancelForm() => showForm = false;
+
+    private async Task PrevPage()
+    {
+        model.Parameters.PageNumber--;
+        await LoadData();
+    }
+
+    private async Task NextPage()
+    {
+        model.Parameters.PageNumber++;
+        await LoadData();
+    }
+}

@@ -1,0 +1,254 @@
+﻿@page "/dashboard"
+@using ITHelpDesk.Models
+@using Providers
+@using Microsoft.AspNetCore.Authorization
+@using System.Security.Claims
+@inject IMyDbModel_Provider Provider
+@inject IJSRuntime JS
+@inject AuthenticationStateProvider AuthStateProvider
+@attribute [Authorize]
+@rendermode InteractiveServer
+
+<div class="container-fluid mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2 class="fw-bold text-primary"><i class="bi bi-speedometer2 me-2"></i>Kontrol Paneli</h2>
+            <p class="text-muted">
+                Hoş geldin, <span class="fw-bold text-dark">@currentUserEmail</span>
+                @if (isTechnician)
+                {
+                    <span class="badge bg-warning text-dark ms-2">IT Teknisyeni</span>
+                }
+                else
+                {
+                    <span class="badge bg-info text-dark ms-2">Personel</span>
+                }
+            </p>
+        </div>
+        <div>
+            <a href="tickets" class="btn btn-primary shadow-sm">
+                <i class="bi bi-plus-lg me-1"></i> Yeni Talep Oluştur
+            </a>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-4">
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm h-100 py-2 border-start border-4 border-primary">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Toplam Talep</div>
+                            <div class="h3 mb-0 font-weight-bold text-gray-800">@myTotalTickets</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="bi bi-folder2-open fa-2x text-gray-300" style="font-size: 2rem; opacity:0.3;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm h-100 py-2 border-start border-4 border-warning">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Devam Eden</div>
+                            <div class="h3 mb-0 font-weight-bold text-gray-800">@myOpenTickets</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="bi bi-hourglass-split fa-2x text-gray-300" style="font-size: 2rem; opacity:0.3;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm h-100 py-2 border-start border-4 border-success">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Çözülen</div>
+                            <div class="h3 mb-0 font-weight-bold text-gray-800">@myResolvedTickets</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="bi bi-check-circle fa-2x text-gray-300" style="font-size: 2rem; opacity:0.3;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @if (isTechnician)
+        {
+            <div class="col-md-3">
+                <div class="card border-0 shadow-sm h-100 py-2 border-start border-4 border-info">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Aktif Personel</div>
+                                <div class="h3 mb-0 font-weight-bold text-gray-800">@totalEmployees</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="bi bi-people fa-2x text-gray-300" style="font-size: 2rem; opacity:0.3;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    @if (isTechnician)
+    {
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-header py-3 bg-white d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-primary">Talep Durum Analizi</h6>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="statusChart" style="max-height: 300px;"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-header py-3 bg-white">
+                        <h6 class="m-0 font-weight-bold text-primary">Öncelik Dağılımı</h6>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="priorityChart" style="max-height: 300px;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-white">
+                <h6 class="m-0 font-weight-bold text-primary">Son Aktivitelerim</h6>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-info">
+                    <i class="bi bi-info-circle me-2"></i>
+                    Şu an sistemde size ait özet verileri görüntülüyorsunuz. Detaylı talep listesi için menüden "Talepler" sayfasına gidebilirsiniz.
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    private List<Employee> employees = new();
+
+    // İstatistikler
+    private int myTotalTickets = 0;
+    private int myOpenTickets = 0;
+    private int myResolvedTickets = 0;
+    private int totalEmployees = 0;
+
+    // Grafik verileri (sadece teknisyen için)
+    private List<StatusGroup> statusGroups = new();
+    private List<PriorityGroup> priorityGroups = new();
+
+    // Kullanıcı Bilgisi
+    private string currentUserEmail = "";
+    private bool isTechnician = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // 1. Giriş yapan kullanıcının kimliğini al
+        var authState = await AuthStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        if (user.Identity != null && user.Identity.IsAuthenticated)
+        {
+            currentUserEmail = user.Identity.Name ?? "";
+            isTechnician = user.IsInRole("Technician") || user.IsInRole("Admin");
+        }
+
+        // 2. Dashboard stats'ı çek (10K veri yerine sadece sayılar)
+        var stats = (await Provider.GetItems<DashboardStats>("sp_GetDashboardStats")).FirstOrDefault();
+
+        if (stats != null)
+        {
+            myTotalTickets = stats.TotalTickets;
+            myOpenTickets = stats.OpenTickets;
+            myResolvedTickets = stats.SolvedTickets;
+            totalEmployees = stats.TotalEmployees;
+        }
+
+        // 3. Grafik verileri için ayrı prosedür çağır (sadece teknisyen için)
+        if (isTechnician)
+        {
+            statusGroups = (await Provider.GetItems<StatusGroup>("sp_GetStatusStats")).ToList();
+            priorityGroups = (await Provider.GetItems<PriorityGroup>("sp_GetPriorityStats")).ToList();
+        }
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender && isTechnician)
+        {
+            await DrawCharts();
+        }
+    }
+
+    private async Task DrawCharts()
+    {
+        var statusConfig = new
+        {
+            type = "bar",
+            data = new
+            {
+                labels = statusGroups.Select(s => s.StatusName).ToArray(),
+                datasets = new[] {
+                    new {
+                        label = "Talep Sayısı",
+                        data = statusGroups.Select(s => s.Count).ToArray(),
+                        backgroundColor = new[] { "#4e73df", "#f6c23e", "#858796", "#1cc88a", "#e74a3b" },
+                        borderRadius = 5
+                    }
+                }
+            },
+            options = new { responsive = true, maintainAspectRatio = false }
+        };
+
+        var priorityConfig = new
+        {
+            type = "doughnut",
+            data = new
+            {
+                labels = priorityGroups.Select(p => p.PriorityName).ToArray(),
+                datasets = new[] {
+                    new {
+                        data = priorityGroups.Select(p => p.Count).ToArray(),
+                        backgroundColor = new[] { "#1cc88a", "#f6c23e", "#fd7e14", "#e74a3b" },
+                        hoverOffset = 4
+                    }
+                }
+            },
+            options = new { responsive = true, maintainAspectRatio = false }
+        };
+
+        await JS.InvokeVoidAsync("createChart", "statusChart", statusConfig);
+        await JS.InvokeVoidAsync("createChart", "priorityChart", priorityConfig);
+    }
+
+    // Grafik için yardımcı sınıflar
+    public class StatusGroup
+    {
+        public string StatusName { get; set; } = "";
+        public int Count { get; set; }
+    }
+
+    public class PriorityGroup
+    {
+        public string PriorityName { get; set; } = "";
+        public int Count { get; set; }
+    }
+}

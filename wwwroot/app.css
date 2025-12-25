@@ -1,0 +1,211 @@
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1:focus {
+    outline: none;
+}
+
+a, .btn-link {
+    color: #0071c1;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+    .btn-primary:hover {
+        color: #fff;
+        background-color: #155495;
+        border-color: #124d8a;
+    }
+
+/* Form Doðrulama Stilleri (Blazor Standart) */
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050;
+}
+
+.invalid {
+    outline: 1px solid red;
+}
+
+.validation-message {
+    color: red;
+}
+
+/* Hata UI (Alt bant) */
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
+
+/* ------------------------------------------------ */
+/* --- YENÝ LOGIN TASARIMI (IT HELP DESK) --- */
+/* ------------------------------------------------ */
+
+.login-container {
+    display: flex;
+    height: 100vh; /* Tam ekran yüksekliði */
+    width: 100%;
+    overflow: hidden; /* Taþmalarý gizle */
+    background-color: #f0f2f5;
+}
+
+/* Sol Taraf: Mavi Alan (Logo ve Yazýlar) */
+.login-left {
+    flex: 1;
+    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%); /* Mavi degrade */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 2rem;
+    position: relative;
+}
+
+    /* Sol tarafa hafif bir desen/dokunulmazlýk eklemek istersen opsiyonel */
+    .login-left::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+    }
+
+.login-brand {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    z-index: 2;
+    letter-spacing: -1px;
+}
+
+.login-subtitle {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    text-align: center;
+    z-index: 2;
+    font-weight: 300;
+}
+
+/* Sað Taraf: Beyaz Alan (Form) */
+.login-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    padding: 2rem;
+}
+
+.login-form-wrapper {
+    width: 100%;
+    max-width: 420px;
+    padding: 2rem;
+    /* Hafif bir gölge ekleyelim ki form havada dursun */
+    background: white;
+    border-radius: 12px;
+}
+
+/* Eðer ekran çok geniþse sað taraf sade kalsýn, wrapper gölgesiz olsun */
+@media (min-width: 769px) {
+    .login-form-wrapper {
+        box-shadow: none;
+    }
+}
+
+.login-header {
+    margin-bottom: 2.5rem;
+    text-align: left; /* Baþlýklar sola yaslý daha modern durur */
+}
+
+    .login-header h3 {
+        font-weight: 700;
+        color: #212529;
+        font-size: 1.75rem;
+        margin-bottom: 0.5rem;
+    }
+
+/* Giriþ Butonu */
+.btn-login {
+    padding: 0.8rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    background: #0d6efd;
+    border: none;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+    .btn-login:hover {
+        background: #0b5ed7;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+    }
+
+/* Input alanlarý */
+.form-control {
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+}
+
+    .form-control:focus {
+        border-color: #0d6efd;
+        box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+    }
+
+.form-floating > label {
+    padding-left: 1rem;
+}
+
+/* Linkler */
+.login-link {
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+    .login-link:hover {
+        color: #0a58ca;
+        text-decoration: underline;
+    }
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+    .login-left {
+        display: none; /* Mobilde mavi alaný gizle */
+    }
+
+    .login-right {
+        background-color: #f8f9fa; /* Mobilde arka planý hafif gri yap */
+    }
+
+    .login-form-wrapper {
+        background: white;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08); /* Kart görünümü kazandýr */
+        border-radius: 16px;
+    }
+}

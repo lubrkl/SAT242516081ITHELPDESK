@@ -1,0 +1,228 @@
+﻿@page "/tickets"
+@using ITHelpDesk.Models
+@using ITHelpDesk.Services
+@using MyDbModels
+@using Providers
+@using Microsoft.Extensions.Localization
+@using SAT242516081.Resources
+@inject IMyDbModel_Provider Provider
+@inject IReportService ReportService
+@inject IJSRuntime JS
+@inject IStringLocalizer<SharedResource> L
+@rendermode InteractiveServer
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize]
+
+<h3>@L["Tickets"]</h3>
+
+@if (!string.IsNullOrEmpty(errorMessage))
+{
+    <div class="alert alert-danger">@errorMessage</div>
+}
+
+<div class="mb-3">
+    <button class="btn btn-primary" @onclick="ShowAddForm">+ @L["Add"]</button>
+    <button class="btn btn-secondary" @onclick="DownloadReport">@L["PdfReport"]</button>
+</div>
+
+@if (showForm)
+{
+    <div class="card mb-3">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6 mb-2">
+                    <label>@L["Title"]</label>
+                    <input @bind="editItem.Title" class="form-control" />
+                </div>
+                <div class="col-md-6 mb-2">
+                    <label>@L["Requester"]</label>
+                    <select @bind="editItem.RequesterId" class="form-control">
+                        <option value="0">@L["Select"]</option>
+                        @foreach (var e in employees)
+                        {
+                            <option value="@e.EmployeeId">@e.FullName</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-md-6 mb-2">
+                    <label>@L["AssignedTo"]</label>
+                    <select @bind="editItem.AssignedToId" class="form-control">
+                        <option value="">@L["Select"]</option>
+                        @foreach (var e in employees)
+                        {
+                            <option value="@e.EmployeeId">@e.FullName</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-md-3 mb-2">
+                    <label>@L["Priority"]</label>
+                    <select @bind="editItem.PriorityId" class="form-control">
+                        @foreach (var p in priorities)
+                        {
+                            <option value="@p.PriorityId">@p.PriorityName</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-md-3 mb-2">
+                    <label>@L["Status"]</label>
+                    <select @bind="editItem.StatusId" class="form-control">
+                        @foreach (var s in statuses)
+                        {
+                            <option value="@s.StatusId">@s.StatusName</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-12 mb-2">
+                    <label>@L["Description"]</label>
+                    <textarea @bind="editItem.Description" class="form-control" rows="3"></textarea>
+                </div>
+            </div>
+            <button class="btn btn-success" @onclick="SaveItem">@L["Save"]</button>
+            <button class="btn btn-secondary" @onclick="CancelForm">@L["Cancel"]</button>
+        </div>
+    </div>
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>@L["Title"]</th>
+            <th>@L["Requester"]</th>
+            <th>@L["AssignedTo"]</th>
+            <th>@L["Priority"]</th>
+            <th>@L["Status"]</th>
+            <th>@L["Date"]</th>
+            <th>@L["Actions"]</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in tickets)
+        {
+            <tr>
+                <td>@item.TicketId</td>
+                <td>@item.Title</td>
+                <td>@item.RequesterName</td>
+                <td>@item.AssignedToName</td>
+                <td><span style="color:@item.PriorityColor">@item.PriorityName</span></td>
+                <td><span style="color:@item.StatusColor">@item.StatusName</span></td>
+                <td>@item.CreatedDate.ToString("dd.MM.yyyy")</td>
+                <td>
+                    <button class="btn btn-sm btn-warning" @onclick="() => EditItem(item)">@L["Edit"]</button>
+                    <button class="btn btn-sm btn-danger" @onclick="() => DeleteItem(item.TicketId)">@L["Delete"]</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    private List<Ticket> tickets = new();
+    private Ticket editItem = new();
+    private bool showForm = false;
+    private bool isEdit = false;
+    private string errorMessage = "";
+
+    private List<Employee> employees = new();
+    private List<Priority> priorities = new();
+    private List<Status> statuses = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadLookups();
+        await LoadData();
+    }
+
+    private async Task LoadLookups()
+    {
+        try
+        {
+            employees = (await Provider.GetItems<Employee>("sp_Employees_Get")).ToList();
+            priorities = (await Provider.GetItems<Priority>("sp_Priorities_GetAll")).ToList();
+            statuses = (await Provider.GetItems<Status>("sp_Statuses_GetAll")).ToList();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Lookup hatası: {ex.Message}";
+        }
+    }
+
+    private async Task LoadData()
+    {
+        try
+        {
+            tickets = (await Provider.GetItems<Ticket>("sp_Tickets_Get")).ToList();
+            Console.WriteLine($"Tickets yüklendi: {tickets.Count} adet");
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Veri çekme hatası: {ex.Message}";
+            Console.WriteLine($"HATA: {ex.Message}");
+        }
+    }
+
+    private void ShowAddForm()
+    {
+        editItem = new Ticket { PriorityId = 1, StatusId = 1 };
+        isEdit = false;
+        showForm = true;
+    }
+
+    private void EditItem(Ticket item)
+    {
+        editItem = new Ticket
+        {
+            TicketId = item.TicketId,
+            Title = item.Title,
+            Description = item.Description,
+            RequesterId = item.RequesterId,
+            AssignedToId = item.AssignedToId,
+            PriorityId = item.PriorityId,
+            StatusId = item.StatusId
+        };
+        isEdit = true;
+        showForm = true;
+    }
+
+    private async Task SaveItem()
+    {
+        if (isEdit)
+        {
+            await Provider.SetItems<Ticket>("sp_Tickets_Update",
+                ("TicketId", editItem.TicketId),
+                ("Title", editItem.Title),
+                ("Description", editItem.Description ?? ""),
+                ("RequesterId", editItem.RequesterId),
+                ("AssignedToId", editItem.AssignedToId ?? (object)DBNull.Value),
+                ("PriorityId", editItem.PriorityId),
+                ("StatusId", editItem.StatusId));
+        }
+        else
+        {
+            await Provider.SetItems<Ticket>("sp_Tickets_Insert",
+                ("Title", editItem.Title),
+                ("Description", editItem.Description ?? ""),
+                ("RequesterId", editItem.RequesterId),
+                ("AssignedToId", editItem.AssignedToId ?? (object)DBNull.Value),
+                ("PriorityId", editItem.PriorityId),
+                ("StatusId", editItem.StatusId));
+        }
+        showForm = false;
+        await LoadData();
+    }
+
+    private async Task DeleteItem(int id)
+    {
+        await Provider.SetItems<Ticket>("sp_Tickets_Delete", ("TicketId", id));
+        await LoadData();
+    }
+
+    private void CancelForm() => showForm = false;
+
+    private async Task DownloadReport()
+    {
+        var pdf = ReportService.GenerateTicketReport(tickets);
+        var fileName = $"Tickets_{DateTime.Now:yyyyMMdd}.pdf";
+        await JS.InvokeVoidAsync("downloadFile", fileName, Convert.ToBase64String(pdf));
+    }
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       

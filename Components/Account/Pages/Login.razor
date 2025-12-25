@@ -1,0 +1,73 @@
+﻿@page "/Account/Login"
+@page "/"
+@layout SAT242516081.Components.Layout.EmptyLayout
+@inject NavigationManager Navigation
+@rendermode InteractiveServer
+
+<div class="login-container">
+    <div class="login-left">
+        <div class="login-brand">
+            <i class="bi bi-shield-lock-fill me-2"></i>IT Help Desk
+        </div>
+        <p class="login-subtitle">
+            Kurumsal Teknik Destek ve <br> Talep Yönetim Platformu
+        </p>
+        <div style="margin-top: 3rem; opacity: 0.7;">
+            <small>&copy; 2025 SAT Projesi</small>
+        </div>
+    </div>
+
+    <div class="login-right">
+        <div class="login-form-wrapper">
+            <div class="login-header">
+                <h3>Hoş Geldiniz</h3>
+                <p class="text-muted">Lütfen giriş yapın.</p>
+            </div>
+
+            <form action="/Account/PerformLogin" method="post">
+
+                <AntiforgeryToken />
+
+                <div class="form-floating mb-3">
+                    <input name="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required />
+                    <label for="floatingInput">E-posta Adresi</label>
+                </div>
+
+                <div class="form-floating mb-4">
+                    <input name="password" type="password" class="form-control" id="floatingPassword" placeholder="Şifre" required />
+                    <label for="floatingPassword">Şifre</label>
+                </div>
+
+                @if (!string.IsNullOrEmpty(ErrorMessage))
+                {
+                    <div class="alert alert-danger d-flex align-items-center" role="alert">
+                        <i class="bi bi-exclamation-circle-fill me-2"></i>
+                        <div>@ErrorMessage</div>
+                    </div>
+                }
+
+                <button type="submit" class="btn btn-primary w-100 btn-login">
+                    Giriş Yap
+                </button>
+            </form>
+
+            <div class="text-center mt-4">
+                <span class="text-muted">Hesabınız yok mu?</span>
+                <a href="/Account/Register" class="login-link ms-1">Hemen Kayıt Ol</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    // Controller'dan gelen hata mesajını URL'den okuyoruz
+    [SupplyParameterFromQuery(Name = "error")]
+    public string? ErrorCode { get; set; }
+
+    private string ErrorMessage => ErrorCode switch
+    {
+        "EksikBilgi" => "Lütfen tüm alanları doldurunuz.",
+        "GecersizGiris" => "E-posta veya şifre hatalı. Lütfen tekrar deneyin.",
+        _ => ""
+    };
+}
